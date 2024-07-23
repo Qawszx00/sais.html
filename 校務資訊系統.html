@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<title>校務資訊系統</title>
+<link rel="icon" href="https://png.pngtree.com/element_our/20190529/ourmid/pngtree-a-computer-image_1198274.jpg" type="image/png">
+<!--設定密碼輸入密碼才可看到內容-->
+<script type="text/javascript">
+   function checkPassword() {
+       var password = document.getElementById("password").value;
+       if (password == "Nutc") {
+           document.getElementById("protectedContent").style.display = "block";
+           document.getElementById("passwordPrompt").style.display = "none";
+       } else {
+           alert("密碼錯誤，請走開");
+       }
+   }
+
+   document.addEventListener('DOMContentLoaded', function() {
+       document.getElementById('password').addEventListener('keypress', function(event) {
+           if (event.key === 'Enter') {
+               checkPassword();
+           }
+       });
+   });
+</script>
+<body>
+<div id="passwordPrompt">
+   <h1>校務資訊組</h1>
+   <p>請輸入密碼</p>
+   <input type="password" id="password">
+   <button onclick="checkPassword()">提交</button>
+</div>
+
+<div id="protectedContent" style="display:none;"> 
+</body>
+<!--設定密碼(尾)-->
+<!--年月日設定,透過js:toLocaleDateString()獲取日期-->
+<h3>    
+   <div id="datetime"></div>
+  <script>
+      function updateDateTime() {
+          var now = new Date();
+          var date = now.toLocaleDateString();
+          var hours = now.getHours();
+          var minutes = now.getMinutes();
+          var seconds = now.getSeconds();
+          var timeValue = (hours >= 12) ? "下午 " : "上午 ";
+          timeValue += ((hours > 12) ? hours - 12 : hours) + " 時";
+          timeValue += ((minutes < 10) ? " 0" : " ") + minutes + " 分";
+          timeValue += ((seconds < 10) ? " 0" : " ") + seconds + " 秒";
+          
+          document.getElementById("datetime").innerHTML = date + " " + timeValue;
+          setTimeout(updateDateTime, 1000);
+      }
+      updateDateTime();
+  </script>
+  <style>
+   #datetime {
+       font-family: Arial, sans-serif;
+       font-size: 20px;
+   }
+</style>
+</h3>
+<!--年月日設定(尾)-->
+<h2>桌機(40-1密碼)</h2>
+<p>Nutc22042205     
+cc40-1@5540(學姊紀錄)</p>
+<h2><a href="https://rpageadm.nutc.edu.tw/platform/"<p>RPAGE</p></a></h2>
+<p>在每個處室網站+/platform即可進入最高權限的RPAGE<br>
+   帳號：admin
+   密碼：5540@nutc 舊:admin@nutc
+</p> 
+<h2><a href="https://sslvpn.nutc.edu.tw/dana-na/auth/url_18/welcome.cgi"<p>校務總系統</p></a></h2> 
+<h2>校務系統帳密</h2>
+<p>帳號：cc40-2
+   密碼：cc40-2@nutc <br>
+   進入後 
+   密碼：cc40-2@5540(帳號不變)
+</p>
+<h2><a href="https://eportal.nutc.edu.tw/login.php"<p>新校務總系統</p></a></h2> 
+<h2>新ePortal帳密</h2>
+<p>帳號：cc40-2
+   密碼：@Nutc22042205</p>
+<h2><a href="https://sso.nutc.edu.tw/eportal/"<p>EP系統網站</p></a></h2> <!--<a>連結網址-->
+<h2>ePortal信箱帳密(校務)</h2>
+<p>帳密：cc995
+   密碼：cc22195540</p> 
+<a href="https://garms.nutc.edu.tw/ActView/VRCalenderView?pl_code=2205&vr_num=1&ym=11307"<p>第二會議室</p></a>
+<h2>筆電密碼</h2>
+   <p>@Nutc22042205</p> 
+<h2>負責表單</h2>
+<a href="https://cc.nutc.edu.tw/p/412-1025-11947.php"<p>表單下載網頁</p></a> <!--11304為113年的4月-->
+<a href="https://cc.nutc.edu.tw/var/file/25/1025/img/76/NTCUST-ISMS-D-046_V3.2.doc"<p>46-系統開發計變更需求申請書(WORD)</p></a>
+<a href="https://cc.nutc.edu.tw/var/file/25/1025/img/76/NTCUST-ISMS-D-047_V3.0.doc"<p>47-校務系統資料申請表(WORD)</p></a>   
+<a href="https://cc.nutc.edu.tw/var/file/25/1025/img/76/NTCUST-ISMS-D-040_V3.0.doc"<p>40-校務行政系統帳號及權限申請暨密碼變更申請表(WORD)</p></a>   
+<a href="https://cc.nutc.edu.tw/var/file/25/1025/img/76/NTCUST-ISMS-D-042_V3.1.doc"<p>42-應用系統測試紀錄表(WORD)</p></a>   
+<a href="https://cc.nutc.edu.tw/var/file/25/1025/img/76/NTCUST-ISMS-D-049_V3.1_1080725.doc"<p>49-廠商遠端連線申請表(WORD)</p></a>
+<a href="https://cc.nutc.edu.tw/var/file/25/1025/img/76/NTCUST-ISMS-D-016_V3.1.doc"<p>16-管理者帳號申請表(WORD)</p></a>   
+<a href="https://cc.nutc.edu.tw/var/file/25/1025/img/76/890148959.odt"<p>113年電腦應用系統軟體維護費調查表(ODT)</p></a>   
+<a href="https://cc.nutc.edu.tw/var/file/25/1025/img/3152/180908865.pdf"<p>Unified Support 申請單(PDF)</p></a>   
+
+<h2>IC卡上傳網路</h2>
+<p>
+ftp://10.22.4.181:5544 檔案總管輸入 <br>
+帳：cc40
+密：22195540
+</p>
+
+<h1>校務資訊組網路</h1>
+CC4X_wifi 密碼：Nutc@2205  <br>
+CC40_wifi 密碼：C22042205
+</p>
