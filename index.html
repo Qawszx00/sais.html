@@ -64,8 +64,6 @@
 <h2>桌機(40-1密碼)</h2>
 <p>Nutc22042205     
 cc40-1@5540(學姊紀錄)</p>
-<h2>桌機(40-2)</h2>
-<p>@nutc22042205</p>
 <h2><a href="https://rpageadm.nutc.edu.tw/platform/"<p>RPAGE</p></a></h2>
 <p>在每個處室網站+/platform即可進入最高權限的RPAGE<br>
    帳號：admin
@@ -87,8 +85,32 @@ cc40-1@5540(學姊紀錄)</p>
 <h2>ePortal信箱帳密(校務)</h2>
 <p>帳密：cc995
    密碼：cc22195540</p> 
-<a href="https://garms.nutc.edu.tw/ActView/VRCalenderView?pl_code=2205&vr_num=1&ym=113010"<p>第二會議室</p></a>
+
+<h2><a id="dynamicLink" href="#">第二會議室</a></h2>
+
+   <script>
+       // 取得當前年月並轉換為指定格式
+       function getDynamicURL() {
+           const baseURL = "https://garms.nutc.edu.tw/ActView/VRCalenderView?pl_code=2205&vr_num=1&ym=";
+           const now = new Date();
+           const year = now.getFullYear(); // 取得西元年份
+           const month = now.getMonth() + 1; // 取得當前月份 (0-11，因此需要加1)
+           
+           // 將年份轉為民國年 (台灣)
+           const taiwanYear = year - 1911;
+           
+           // 格式化月份為兩位數字，例如：01, 02, ..., 12
+           const formattedMonth = month < 10 ? '0' + month : month;
+
+           // 生成最終的 URL，將年份和月份拼接到基礎 URL 後面
+           return `${baseURL}${taiwanYear}${formattedMonth}`;
+       }
+
+       // 設定動態生成的 URL 到 a 標籤
+       document.getElementById("dynamicLink").href = getDynamicURL();
+   </script>
 <h2>筆電密碼</h2>
+   <p>@nutc22042205</p>
    <p>@Nutc22042205</p>
 <h2>負責表單</h2>
 <a href="https://cc.nutc.edu.tw/p/412-1025-11947.php"<p>表單下載網頁</p></a> <!--11304為113年的4月-->
